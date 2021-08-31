@@ -1,0 +1,11 @@
+aiogram
+loguru
+pymongo[tls,srv]==3.11.0
+pandas
+python-dotenv
+dnspython
+requests
+fake_useragent
+selenium
+webdriver_manager
+aioschedule

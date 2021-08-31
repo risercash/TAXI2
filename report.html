@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:x="urn:schemas-microsoft-com:office:excel">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: thin solid #000000;
+            text-align: left;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
+
+        th {
+            border: thin solid #000000;
+            padding: 2px 4px;
+        }
+
+        tfoot {
+            display: none;
+            visibility: collapse;
+        }
+
+        .r {
+            text-align: right;
+        }
+
+        .c {
+            text-align: center;
+        }
+
+        .l {
+            text-align: left;
+        }
+
+        .trim {
+            white-space: nowrap;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .group {
+            height: 42px;
+            font-weight: bold;
+        }
+
+        .group.total {
+            height: auto;
+        }
+    </style>
+    <!--[if gte mso 9]>
+    <xml>
+    <x:ExcelWorkbook>
+        <x:ExcelWorksheets>
+            <x:ExcelWorksheet>
+                <x:Name>Report</x:Name>
+                <x:WorksheetOptions>
+                    <x:FreezePanes/>
+                    <x:FrozenNoSplit/>
+                    <x:SplitHorizontal>1</x:SplitHorizontal>
+                    <x:TopRowBottomPane>1</x:TopRowBottomPane>
+                    <x:Panes>
+                        <x:Pane>
+                         <x:Number>3</x:Number>
+                        </x:Pane>
+                        <x:Pane>
+                         <x:Number>2</x:Number>
+                         <x:ActiveRow>0</x:ActiveRow>
+                        </x:Pane>                    
+                    </x:Panes>
+                    <x:ActivePane>2</x:ActivePane>
+                    <x:ProtectObjects>False</x:ProtectObjects>
+                    <x:ProtectScenarios>False</x:ProtectScenarios>
+                </x:WorksheetOptions>
+            </x:ExcelWorksheet>
+        </x:ExcelWorksheets>
+    </x:ExcelWorkbook>
+    </xml>
+    <![endif]-->
+</head>
+<body>
+    <table>
+  <colgroup>
+    <col width="65"/>
+    <col width="90"/>
+    <col width="60"/>
+    <col width="220"/>
+    <col width="180"/>
+    <col width="140"/>
+    <col width="180"/>
+    <col width="220"/>
+    <col width="220"/>
+    <col width="80"/>
+    <col width="80"/>
+    <col width="200"/>
+    <col width="140"/>
+    <col width="80"/>
+    <col width="120"/>
+    <col width="140"/>
+    <col width="120"/>
+    <col width="100"/>
+    <col width="140"/>
+    <col width="60"/>
+    <col width="70"/>
+    <col width="60"/>
+    <col width="70"/>
+    <col width="60"/>
+    <col width="70"/>
+    <col width="78"/>
+    <col width="140"/>
+    <col width="180"/>
+    <col width="260"/>
+  </colgroup>
+  <thead>
+  <tr>
+    <th x:autofilter='all' class="c">Number</th>
+    <th x:autofilter='all' class="c">Order date</th>
+    <th x:autofilter='all' class="c">Time</th>
+    <th x:autofilter='all'>Company</th>
+    <th x:autofilter='all'>Responsible party</th>
+    <th x:autofilter='all'>Passenger</th>
+    <th x:autofilter='all'>Service class</th>
+    <th x:autofilter='all'>Pickup address</th>
+    <th x:autofilter='all'>Destination address</th>
+    <th x:autofilter='all' class="c">License plate number</th>
+    <th x:autofilter='all' class="c">Nickname</th>
+    <th x:autofilter='all'>Driver</th>
+    <th x:autofilter='all'>Vehicle</th>
+    <th x:autofilter='all' class="c">Bill #</th>
+    <th x:autofilter='all'>Payment method</th>
+    <th x:autofilter='all'>Type</th>
+    <th x:autofilter='all' class="c">Amount</th>
+    <th x:autofilter='all' class="c">Commission</th>
+    <th x:autofilter='all'>Phone</th>
+    <th x:autofilter='all' class="c">Accepted</th>
+    <th x:autofilter='all' class="c">Ready for pickup</th>
+    <th x:autofilter='all' class="c">Callback</th>
+    <th x:autofilter='all' class="c">Waiting</th>
+    <th x:autofilter='all' class="c">En route</th>
+    <th x:autofilter='all' class="c">Completed</th>
+    <th x:autofilter='all' class="c">Distance</th>
+    <th x:autofilter='all'>Cost code</th>
+    <th x:autofilter='all'>Info</th>
+    <th x:autofilter='all'>Comment</th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr class="group total">
+        <td colspan="16">
+          <b>Total [0]</b>
+        </td>
+        <td class="r">
+          <b>0,00</b>
+        </td>
+        <td class="r">
+          <b>0,00</b>
+        </td>
+        <td colspan="11"></td>
+      </tr>
+  </tbody>
+</table>
+</body>
+</html>
