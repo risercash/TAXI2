@@ -9,3 +9,4 @@ fake_useragent
 selenium
 webdriver_manager
 aioschedule
+lxml==4.6.3

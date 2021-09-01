@@ -46,7 +46,9 @@ async def start_parsing():
             car_number = row[9]
             drivers = list(Taxi.users.keys())
             if car_number in drivers:
-                await bot.send_message(Taxi.users[row[9]][0], ans)
+                try:
+                    await bot.send_message(Taxi.users[row[9]][0], ans)
+                except: pass
                 
             if Taxi.work == True:
                 await bot.send_message(ADMIN, ans)
