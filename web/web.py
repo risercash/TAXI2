@@ -30,7 +30,7 @@ def run_browser():
     options.add_argument('--disable-infobars')
     options.add_experimental_option(
         "excludeSwitches", ["ignore-certificate-errors"])
-    return webdriver.Chrome('chromedriver', options=options)#executable_path=ChromeDriverManager().install()
+    return webdriver.Chrome(executable_path='/home/ubuntu/TAXI2/chromedriver', options=options)#executable_path=ChromeDriverManager().install()
 
 
 def find_element(br, selector):
