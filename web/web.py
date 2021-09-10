@@ -53,6 +53,7 @@ def new_cookies(br):
     pickle.dump(br.get_cookies(), open('cookies', 'wb'))
 
 
+
 async def inter_taxi():
     br = run_browser()
     br.get("https://lk.taximeter.yandex.ru/report/company/")

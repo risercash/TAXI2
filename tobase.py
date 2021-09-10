@@ -9,7 +9,7 @@ import ssl
 
 col = pymongo.MongoClient(URL)
 client = pymongo.MongoClient(URL, ssl=True, ssl_cert_reqs=ssl.CERT_NONE)
-Users = client['TAXI']['Users']
+Users = client['TAXI2']['Users']
 
 
 def new_user(usr):

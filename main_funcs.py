@@ -57,7 +57,6 @@ async def start_parsing():
 
 async def cookie_start_update():
     while True:
-        await bot.send_message(ASM, "cookies updating")
         await rerun_browser()
         web.update_cookies()
         await asyncio.sleep(24000)

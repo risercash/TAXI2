@@ -1,169 +1,186 @@
 <!DOCTYPE html>
-<html xmlns:x="urn:schemas-microsoft-com:office:excel">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <style>
-        table {
-            font-size: 11pt;
-            border-collapse: collapse;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Yango Pro</title>
+    <script type="text/javascript">window.TaximeterOptions = {"ApiUrl":"https://taximeter.yandex.rostaxi.org","StaticUrl":"https://static.rostaxi.org","SurgeMapUrl":"https://taximeter.yandex.rostaxi.org","ShowMapsLogo":true};</script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400&lang=ru" type="text/css">
+    <link rel="stylesheet" href="https://static.rostaxi.org/css/signin.css" type="text/css" />
+    <link rel="shortcut icon" href="https://static.rostaxi.org/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="https://static.rostaxi.org/ico/apple-touch-icon-144-precomposed.png" sizes="144x144">
+    <link rel="apple-touch-icon-precomposed" href="https://static.rostaxi.org/ico/apple-touch-icon-114-precomposed.png" sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="https://static.rostaxi.org/ico/apple-touch-icon-72-precomposed.png" sizes="72x72">
+    <link rel="apple-touch-icon-precomposed" href="https://static.rostaxi.org/ico/apple-touch-icon-57-precomposed.png">
 
-        td {
-            border: thin solid #000000;
-            text-align: left;
-            padding: 2px 4px;
-            white-space: nowrap;
-        }
-
-        th {
-            border: thin solid #000000;
-            padding: 2px 4px;
-        }
-
-        tfoot {
-            display: none;
-            visibility: collapse;
-        }
-
-        .r {
-            text-align: right;
-        }
-
-        .c {
-            text-align: center;
-        }
-
-        .l {
-            text-align: left;
-        }
-
-        .trim {
-            white-space: nowrap;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-
-        .group {
-            height: 42px;
-            font-weight: bold;
-        }
-
-        .group.total {
-            height: auto;
-        }
-    </style>
-    <!--[if gte mso 9]>
-    <xml>
-    <x:ExcelWorkbook>
-        <x:ExcelWorksheets>
-            <x:ExcelWorksheet>
-                <x:Name>Report</x:Name>
-                <x:WorksheetOptions>
-                    <x:FreezePanes/>
-                    <x:FrozenNoSplit/>
-                    <x:SplitHorizontal>1</x:SplitHorizontal>
-                    <x:TopRowBottomPane>1</x:TopRowBottomPane>
-                    <x:Panes>
-                        <x:Pane>
-                         <x:Number>3</x:Number>
-                        </x:Pane>
-                        <x:Pane>
-                         <x:Number>2</x:Number>
-                         <x:ActiveRow>0</x:ActiveRow>
-                        </x:Pane>                    
-                    </x:Panes>
-                    <x:ActivePane>2</x:ActivePane>
-                    <x:ProtectObjects>False</x:ProtectObjects>
-                    <x:ProtectScenarios>False</x:ProtectScenarios>
-                </x:WorksheetOptions>
-            </x:ExcelWorksheet>
-        </x:ExcelWorksheets>
-    </x:ExcelWorkbook>
-    </xml>
-    <![endif]-->
 </head>
-<body>
-    <table>
-  <colgroup>
-    <col width="65"/>
-    <col width="90"/>
-    <col width="60"/>
-    <col width="220"/>
-    <col width="180"/>
-    <col width="140"/>
-    <col width="180"/>
-    <col width="220"/>
-    <col width="220"/>
-    <col width="80"/>
-    <col width="80"/>
-    <col width="200"/>
-    <col width="140"/>
-    <col width="80"/>
-    <col width="120"/>
-    <col width="140"/>
-    <col width="120"/>
-    <col width="100"/>
-    <col width="140"/>
-    <col width="60"/>
-    <col width="70"/>
-    <col width="60"/>
-    <col width="70"/>
-    <col width="60"/>
-    <col width="70"/>
-    <col width="78"/>
-    <col width="140"/>
-    <col width="180"/>
-    <col width="260"/>
-  </colgroup>
-  <thead>
-  <tr>
-    <th x:autofilter='all' class="c">Number</th>
-    <th x:autofilter='all' class="c">Order date</th>
-    <th x:autofilter='all' class="c">Time</th>
-    <th x:autofilter='all'>Company</th>
-    <th x:autofilter='all'>Responsible party</th>
-    <th x:autofilter='all'>Passenger</th>
-    <th x:autofilter='all'>Service class</th>
-    <th x:autofilter='all'>Pickup address</th>
-    <th x:autofilter='all'>Destination address</th>
-    <th x:autofilter='all' class="c">License plate number</th>
-    <th x:autofilter='all' class="c">Nickname</th>
-    <th x:autofilter='all'>Driver</th>
-    <th x:autofilter='all'>Vehicle</th>
-    <th x:autofilter='all' class="c">Bill #</th>
-    <th x:autofilter='all'>Payment method</th>
-    <th x:autofilter='all'>Type</th>
-    <th x:autofilter='all' class="c">Amount</th>
-    <th x:autofilter='all' class="c">Commission</th>
-    <th x:autofilter='all'>Phone</th>
-    <th x:autofilter='all' class="c">Accepted</th>
-    <th x:autofilter='all' class="c">Ready for pickup</th>
-    <th x:autofilter='all' class="c">Callback</th>
-    <th x:autofilter='all' class="c">Waiting</th>
-    <th x:autofilter='all' class="c">En route</th>
-    <th x:autofilter='all' class="c">Completed</th>
-    <th x:autofilter='all' class="c">Distance</th>
-    <th x:autofilter='all'>Cost code</th>
-    <th x:autofilter='all'>Info</th>
-    <th x:autofilter='all'>Comment</th>
-  </tr>
-  </thead>
-  <tbody>
-      <tr class="group total">
-        <td colspan="16">
-          <b>Total [0]</b>
-        </td>
-        <td class="r">
-          <b>0,00</b>
-        </td>
-        <td class="r">
-          <b>0,00</b>
-        </td>
-        <td colspan="11"></td>
-      </tr>
-  </tbody>
-</table>
+<body class="cover-1">
+    
+
+
+<div class="wrapper">
+    <div class="main">
+        <div class="header"></div>
+        <div class="banner">
+            <h1>Yango Pro</h1>
+            
+    <h2 class="hidden-small">Log in to account</h2>
+
+        </div>
+        <div class="signin-card signin-card-bg clearfix">
+            
+
+
+
+
+
+<img class="profile-img" src="https://static.rostaxi.org/img/avatar_2x.png" alt="">
+<p class="profile-name"></p>
+<form class="form-horizontal" method="post" action="/login" novalidate="novalidate" enctype="application/x-www-form-urlencoded">
+    <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/report/items/company?datefield=0&amp;status=0&amp;time=true&amp;discount=false&amp;q=&amp;payment&amp;s=2021-09-10T13%3A00&amp;e=2021-09-10T13%3A59&amp;excel=true" />
+    <input type="text" class="input input-large input-large-18" placeholder="Company \ User" data-val="true" data-val-required="Fill out the Login field" id="Login" name="Login" value="" />
+    <input type="password" class="input input-large input-large-18" placeholder="Password" id="Password" name="Password" />
+    <input type="submit" value="Log in" />
+    <label><input type="checkbox" checked="checked" data-val="true" data-val-required="The Remember field is required." id="Remember" name="Remember" value="true" /> <span>Stay logged in</span></label>
+        <div>
+            <a href="https://passport.yandex.ru/auth?retpath=https%3A%2F%2Flk.taximeter.yandex.ru%2Freport%2Fitems%2Fcompany%3Fdatefield%3D0%26status%3D0%26time%3Dtrue%26discount%3Dfalse%26q%3D%26payment%26s%3D2021-09-10T13%253A00%26e%3D2021-09-10T13%253A59%26excel%3Dtrue">&#x412;&#x43E;&#x439;&#x442;&#x438; &#x447;&#x435;&#x440;&#x435;&#x437; &#x41F;&#x430;&#x441;&#x43F;&#x43E;&#x440;&#x442;</a>
+        </div>
+<input name="Remember" type="hidden" value="false" /></form>
+
+        </div>
+    </div>
+    <div class="footer">
+            <p>Яндекс &copy; 2021</p>    
+        <select class="lang">
+                    <option value="ru">ru</option>
+                    <option value="en" selected="selected">en</option>
+                    <option value="et">et</option>
+                    <option value="fa">fa</option>
+                    <option value="hy">hy</option>
+                    <option value="ka">ka</option>
+                    <option value="kk">kk</option>
+                    <option value="lt">lt</option>
+                    <option value="lv">lv</option>
+                    <option value="tg">tg</option>
+                    <option value="uk">uk</option>
+                    <option value="ky">ky</option>
+                    <option value="ro">ro</option>
+                    <option value="sr">sr</option>
+                    <option value="uz">uz</option>
+                    <option value="fr">fr</option>
+                    <option value="fi">fi</option>
+                    <option value="he">he</option>
+                    <option value="az">az</option>
+                    <option value="no">no</option>
+        </select>
+    </div>
+</div>
+
+
+
+
+<script src="https://static.rostaxi.org/js/jquery.js"></script>
+        <!-- Yandex.Metrika counter --> 
+    <script type="text/javascript" >
+        (function(m, e, t, r, i, k, a) {
+            m[i]=m[i]||function() {
+                (m[i].a=m[i].a||[]).push(arguments)
+            }; 
+            m[i].l=1*new Date();
+            k=e.createElement(t),
+                a=e.getElementsByTagName(t)[0],
+                k.async=1,
+                k.src=r,
+                a.parentNode.insertBefore(k,a)
+        })
+            (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); 
+        ym(44292669, "init",
+            {
+                 clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true
+            });
+        window.yaParams = { "park_id": ""};
+        ym(44292669, 'params', window.yaParams||{});
+    </script> 
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/44292669" style="position: absolute; left: -9999px;" alt=""/>
+        </div>
+    </noscript> 
+    <!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+    window.Translations = {"layout_today":"Сегодня","map_settings":"Settings","map_car_numbers":"License plates","map_cars":"Cars","map_orders":"Orders","map_show_all":"Show all","map_surge_map":"Surge map"};
+</script>
+
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+            $(".btn-close")
+                .click(function () {
+                    $(".modal").hide();
+                    $(".modal-backdrop").hide();
+                });
+
+            $(".lang").change(function () {
+                var lang = $(".lang").val();
+                selectLang(lang);
+            });
+
+            function selectLang(lang) {
+                var languages = getLangFromCookie();
+                languages.uic = lang;
+                setLangToCookie(languages);
+                location.href = "/login";
+
+                function getLangFromCookie() {
+                    var langCookie = getCookie('.AspNetCore.Culture');
+                    if (langCookie != null && langCookie !== '') {
+                        var langParts = langCookie.split('|');
+                        if (langParts.length === 2) {
+                            var languages = {};
+                            for (var i = 0; i < langParts.length; i++) {
+                                var keyValue = langParts[i].split('=');
+                                languages[keyValue[0]] = keyValue[1];
+                            }
+                            return languages;
+                        }
+                    }
+                    return {};
+                }
+                function setLangToCookie(languages) {
+                    if (languages.c == null) {
+                        languages.c = languages.uic;
+                    }
+                    var cookieValue = 'c=' + languages.c + '|uic=' + languages.uic;
+                    setCookie('.AspNetCore.Culture', cookieValue);
+                }
+                function getCookie(name) {
+                    var value = "; " + document.cookie;
+                    var parts = value.split("; " + name + "=");
+                    if (parts.length === 2) {
+                        return decodeURIComponent(parts.pop().split(";").shift());
+                    }
+                    return null;
+                }
+                function setCookie(name, value) {
+                    document.cookie = name + "=" + escape(value);
+                }
+            }
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(function () {
+            if ($("#SmsSession").val()) {
+                $("#Code").focus();
+            };
+        });
+    </script>
+
+
 </body>
 </html>

@@ -22,7 +22,7 @@ async def on_shutdown(dp):
 
 
 async def on_startup(dp):
-    await bot.send_message(ADMIN, 'Бот Перезапустился!!!')
+    #await bot.send_message(ADMIN, 'Бот Перезапустился!!!')
     asyncio.create_task(cookie_start_update())
     #asyncio.create_task(scheduler())  # Запускаем планировщик
     asyncio.create_task(start_parsing())  # Запускаем парсер
